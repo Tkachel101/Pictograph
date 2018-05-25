@@ -12,6 +12,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadImage" text="Load Image" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
               <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
             </items>
           </Menu>
@@ -30,5 +32,10 @@
       <ImageView fx:id="image" fitHeight="394.0" fitWidth="526.0" layoutX="60.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
       <Separator layoutX="620.0" layoutY="29.0" orientation="VERTICAL" prefHeight="491.0" prefWidth="4.0" />
       <Separator layoutY="520.0" prefHeight="0.0" prefWidth="840.0" />
+      <ScrollPane fx:id="scrollBar" layoutY="520.0" prefHeight="161.0" prefWidth="840.0" vbarPolicy="NEVER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
