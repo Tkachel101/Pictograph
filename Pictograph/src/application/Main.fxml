@@ -12,19 +12,36 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#loadImage" text="Load Image" />
+                  <MenuItem mnemonicParsing="false" onAction="#newProject" text="New Project" />
+                  <MenuItem mnemonicParsing="false" onAction="#openProject" text="Open Project" />
+                  <Menu fx:id="recent" mnemonicParsing="false" text="Open Recent">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="No Recent Projects" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadImage" text="Import Images" />
+                  <MenuItem mnemonicParsing="false" onAction="#removeImages" text="Remove Images" />
                   <SeparatorMenuItem mnemonicParsing="false" />
               <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#copy" text="Copy" />
+                  <MenuItem mnemonicParsing="false" onAction="#paste" text="Paste" />
+              <MenuItem mnemonicParsing="false" onAction="#delete" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo" />
+                  <MenuItem mnemonicParsing="false" onAction="#redo" text="Redo" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About Pictograph" />
             </items>
           </Menu>
         </menus>
@@ -34,7 +51,7 @@
       <Separator layoutY="520.0" prefHeight="0.0" prefWidth="840.0" />
       <ScrollPane fx:id="scrollBar" layoutY="520.0" prefHeight="161.0" prefWidth="840.0" vbarPolicy="NEVER">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="161.0" prefWidth="835.0" />
         </content>
       </ScrollPane>
    </children>

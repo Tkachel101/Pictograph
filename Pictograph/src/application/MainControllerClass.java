@@ -13,8 +13,8 @@ import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Menu;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
@@ -24,26 +24,39 @@ public class MainControllerClass implements Initializable {
 	private ImageView image;
 	@FXML
 	private ScrollPane scrollBar;
-	
+	@FXML
+	private Menu recent;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	public void close() {
-		Platform.exit();
+
+	public void newProject() {
+
+	}
+
+	public void openProject() {
+
+	}
+
+	public void save() {
+
+	}
+
+	public void saveAs() {
+
 	}
 
 	public void loadImage() {
 		FileChooser fileChooser = new FileChooser();
-		 fileChooser.setTitle("Open Resource File");
-		 fileChooser.getExtensionFilters().addAll(
-		         new ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
-		 File selectedFile = fileChooser.showOpenDialog(null);
-		 if (selectedFile != null) {
-			 BufferedImage loadedImage = null;
-			 try {
+		fileChooser.setTitle("Open Resource File");
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
+		File selectedFile = fileChooser.showOpenDialog(null);
+		if (selectedFile != null) {
+			BufferedImage loadedImage = null;
+			try {
 				loadedImage = ImageIO.read(selectedFile);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -56,7 +69,40 @@ public class MainControllerClass implements Initializable {
 				}
 			}
 			image.setImage(SwingFXUtils.toFXImage(loadedImage, null));
-			  
-		 }
+
+		}
 	}
+
+	public void removeImages() {
+
+	}
+
+	public void close() {
+		Platform.exit();
+	}
+
+	public void copy() {
+
+	}
+
+	public void paste() {
+
+	}
+
+	public void delete() {
+
+	}
+	
+	public void undo(){
+		
+	}
+	
+	public void redo(){
+		
+	}
+	
+	public void about(){
+		
+	}
+	
 }
