@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -51,7 +52,10 @@
       <Separator layoutY="520.0" prefHeight="0.0" prefWidth="840.0" />
       <ScrollPane fx:id="scrollBar" layoutY="520.0" prefHeight="161.0" prefWidth="840.0" vbarPolicy="NEVER">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="161.0" prefWidth="835.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="161.0" prefWidth="835.0" style="-fx-padding: 20;">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding></AnchorPane>
         </content>
       </ScrollPane>
    </children>
